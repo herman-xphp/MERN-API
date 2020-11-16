@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 const productRoutes = require('./src/routes/products');
+const authRoutes = require('./src/routes/auth');
 
 app.use(bodyParser.json())  // type json
 
@@ -14,6 +15,7 @@ app.use((req, res, next) => {
 })
 
 app.use('/', productRoutes);
+app.use('/v1/auth', authRoutes);
 
 app.listen(8080);
 console.log("Running on localhost:8080");
