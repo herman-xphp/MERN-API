@@ -1,10 +1,13 @@
 Standar API
 
-{root.api}/{version}/{grouping}/{endpoint}
+[METHOD] : {root.api}/{version}/{grouping}/{endpoint}
 SAMPLE:
-http://mern-api.hermanxphp.com/v1/auth/login
+[POST]: http://mern-api.hermanxphp.com/v1/auth/login
+
+==========================================================================================
 
 Standar Status Response
+
 200 - OK                      --> Call API Success.
 201 - CREATED                 --> Post Success.
 400 - BAD REQUEST             --> Error on Client Side (Bisa input yang salah dll).
@@ -14,10 +17,12 @@ Standar Status Response
 500 - INTERNAL SERVER ERROR   --> Error on Server Side.
 502 - BAD GATEWAY             --> Interval Response From Antoher Request.
 
+===========================================================================================
+
 GROUP: Authentication
 
 [1] - Register
-{root.api}/{version}/auth/register
+[POST] : {root.api}/{version}/auth/register
 
 req:
 {
